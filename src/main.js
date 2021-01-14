@@ -7,9 +7,16 @@ import VueResource from 'vue-resource'
 import Budgeting from './components/Budgeting'
 import About from './components/About'
 import AddDebt from './components/AddDebts'
+import AddExpenses from './components/AddExpenses'
+import AddIncome from './components/AddIncome'
 import DebtDetails from './components/DebtsDetails'
+import ExpensesDetails from './components/ExpensesDetails'
+import IncomeDetails from './components/IncomeDetails'
 import EditDebt    from './components/EditDebts'
+import EditExpenses    from './components/EditExpenses'
+import EditIncome    from './components/EditIncome'
 import Expenses from './components/Expenses'
+import Income from './components/Income'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -21,9 +28,16 @@ const router = new VueRouter({
    {path:'/', component: Budgeting},
    {path: '/about', component: About},
    {path: '/addDebts', component: AddDebt},
+   {path: '/addExpenses', component: AddExpenses},
+   {path: '/addIncome', component: AddIncome},
    {path: '/debt/:id', component: DebtDetails},
+   {path: '/expenses/:id', component: ExpensesDetails},
+   {path: '/income/:id', component: IncomeDetails},
    {path: '/editdebt/:id', component: EditDebt},
-   {path:'/expenses', component: Expenses}
+   {path: '/editexpenses/:id', component: EditExpenses},
+   {path: '/editincome/:id', component: EditIncome},
+   {path:'/expenses', component: Expenses},
+   {path:'/income', component: Income}
   ]
 })
 
@@ -45,9 +59,12 @@ new Vue({
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
+            <!--<li><router-link to="/about">About</router-link></li>-->
             <li><router-link to="/addDebts">Add Debt</router-link></li>
             <li><router-link to="/expenses">Expenses</router-link></li>
+            <li><router-link to="/addExpenses">Add Expenses</router-link></li>
+            <li><router-link to="/income">Income</router-link></li>
+            <li><router-link to="/addIncome">Add Income</router-link></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

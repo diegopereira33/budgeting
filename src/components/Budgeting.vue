@@ -52,7 +52,7 @@
       fetchBudgeting(){
         this.$http.get('http://10.0.0.111:8080/debt')
           .then(function(response){
-              console.log("response", response.body);
+              //console.log("response", response.body);
               this.budgeting = response.body;
           });
       },
